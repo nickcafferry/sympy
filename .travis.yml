@@ -326,5 +326,8 @@ script:
         asv run --config asv.conf.travis.json;
         asv compare master HEAD --config asv.conf.travis.json --factor 1.5;
     fi
+    
+after_success:
+  - bash <(curl -s https://codecov.io/bash)   
 notifications:
   email: false
