@@ -1,7 +1,7 @@
   
 [run]
 branch = True
-source = source
+source = sympy
 
 [report]
 exclude_lines =
