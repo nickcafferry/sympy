@@ -324,7 +324,7 @@ script:
     fi
     
 after_success:
-  - coverage run source/__init__.py
+  - coverage run sympy/__init__.py
   - codecov
   - bash <(curl -s https://codecov.io/bash)   
 notifications:
