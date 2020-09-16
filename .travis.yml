@@ -2,7 +2,6 @@ language: python
 sudo: false
 stages:
 - quality
-- baseline
 - test
 - allowed_failures
 
@@ -29,12 +28,6 @@ matrix:
       script: bin/test quality
       env:
 
-    - stage: baseline
-      python: 3.8
-      dist: xenial
-      sudo: true
-      env:
-        - TEST_DOCTESTS="true" FASTCACHE="false" TEST_SETUP="true" TEST_EXAMPLES="true"
     - python: 3.8
       dist: xenial
       sudo: true
