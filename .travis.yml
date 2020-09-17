@@ -78,44 +78,31 @@ jobs:
       env:
         - TEST_SYMPY="true" SPLIT="2/2"
 
-    - python: 3.9-dev
-      dist: xenial
-      env:
-        - SPLIT="1/2" TEST_SYMPY="true"
-    - python: 3.9-dev
-      dist: xenial
-      env:
-        - SPLIT="2/2" TEST_SYMPY="true"
-    - python: 3.9-dev
-      dist: xenial
-      env:
-        - TEST_DOCTESTS="true" TEST_SETUP="true" TEST_EXAMPLES="true"
-
     # Tensorflow 1 support
     - python: 3.6
       env:
         - TEST_OPT_DEPENDENCY="tensorflow<2 python=3"
         - TEST_TENSORFLOW_1=true
 
-    - python: 3.8
-      dist: xenial
-      env:
-        - TEST_SPHINX="true"
-        - secure: "YIEZal9EBTL+fg2YmoZoS8Bvt3eAVUOZjb38CtqpzR2CCSXWoUk35KG23m2NknlY1iKfYJyt7XWBszT/VKOQEbWQq7PIakV4vIByrWacgBxy1x3WC+rZoW7TX+JJiL+y942qIYbMoNMMB8xFpE5RDLSjSecMpFhJJXoafVTvju8="
-      addons:
-        apt:
-          packages:
-            - graphviz
-            - inkscape
-            - texlive
-            - texlive-xetex
-            - texlive-fonts-recommended
-            - texlive-latex-extra
-            - latexmk
-            - lmodern
-            - librsvg2-bin
-            - imagemagick
-            - docbook2x
+#    - python: 3.8
+#      dist: xenial
+#      env:
+#        - TEST_SPHINX="true"
+#        - secure: "YIEZal9EBTL+fg2YmoZoS8Bvt3eAVUOZjb38CtqpzR2CCSXWoUk35KG23m2NknlY1iKfYJyt7XWBszT/VKOQEbWQq7PIakV4vIByrWacgBxy1x3WC+rZoW7TX+JJiL+y942qIYbMoNMMB8xFpE5RDLSjSecMpFhJJXoafVTvju8="
+#      addons:
+#        apt:
+#          packages:
+#            - graphviz
+#            - inkscape
+#            - texlive
+#            - texlive-xetex
+#            - texlive-fonts-recommended
+#            - texlive-latex-extra
+#            - latexmk
+#            - lmodern
+#            - librsvg2-bin
+#            - imagemagick
+#            - docbook2x
 
     - python: 3.8
       dist: xenial
